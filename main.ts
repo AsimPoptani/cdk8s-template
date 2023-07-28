@@ -5,5 +5,4 @@ const argo = new Argo({
   basePath: '/'
 })
 
-
 argo.synth()

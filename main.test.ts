@@ -28,7 +28,7 @@ describe('Main', () => {
 
   test('Synth', () => {
     const argo = new Argo({})
-    argo['app'].synth = jest.fn()
+    argo['app'].synth = jest.fn() // eslint-disable-line
     argo.synth()
   })
 })

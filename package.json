@@ -17,11 +17,12 @@
     "upgrade:next": "npm i cdk8s@next cdk8s-cli@next"
   },
   "dependencies": {
-    "@opencdk8s/cdk8s-argocd-resources": "^0.0.5",
+    "@types/tmp": "^0.2.3",
     "cdk8s": "^2.7.110",
     "cdk8s-plus-25": "^2.8.92",
     "cdk8s-plus-26": "^2.4.92",
-    "constructs": "^10.2.69"
+    "constructs": "^10.2.69",
+    "tmp": "^0.2.1"
   },
   "devDependencies": {
     "@types/jest": "^26.0.24",

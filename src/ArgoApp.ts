@@ -1,5 +1,5 @@
 import { App, type AppProps, Chart, Include, JsonPatch, YamlOutputType } from 'cdk8s'
-import { ArgoCdApplication } from '@opencdk8s/cdk8s-argocd-resources'
+import {Application} from "../imports/argoproj.io";
 import { KubeConfigMap, KubeNamespace, KubeSecret } from '../imports/k8s'
 import { ArgocdConfigManagementPlugin } from '../imports/argocd'
 import * as path from 'path'
@@ -50,11 +50,11 @@ export class Argo {
       }
     })
 
-    new ArgoCdApplication(this.chart, 'main-chart-app', {
+    new Application(this.chart, 'main-chart-app', {
       spec: {
         project: 'default',
         source: {
-          repoURL: this.repoURL,
+          repoUrl: this.repoURL,
           plugin: {},
           path: `${this.basePath}`
         },
@@ -271,11 +271,11 @@ export class Argo {
     })
 
     // Setup ArgoCD Application
-    new ArgoCdApplication(this.chart, `${name}-app`, {
+    new Application(this.chart, `${name}-app`, {
       spec: {
         project: 'default',
         source: {
-          repoURL: this.repoURL,
+          repoUrl: this.repoURL,
           plugin: {},
           path: `${this.basePath}`
         },
